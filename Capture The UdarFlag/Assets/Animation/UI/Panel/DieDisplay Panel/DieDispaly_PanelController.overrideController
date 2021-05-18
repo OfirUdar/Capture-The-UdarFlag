@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DieDispaly_PanelController
+  m_Controller: {fileID: 9100000, guid: 72f13b3f9de5c524b9cbe99be1918afe, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f37a65139a82ae449a16b89074cf6124, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 94f3077c1f7ba004c974298d8b6b37f8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 73882619d2d3fc046b8081a2fe1a0632, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bd4cde15c933a9e459d23760130e6173, type: 2}
