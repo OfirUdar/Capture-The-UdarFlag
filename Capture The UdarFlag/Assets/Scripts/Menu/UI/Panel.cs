@@ -10,13 +10,15 @@ public class Panel : MonoBehaviour
 
     private int _closePanelHash = Animator.StringToHash("Move_Out");
 
+
+
     private void OnEnable()
     {
-        ((GameNetworkManager)(NetworkManager.singleton)).CursorHandler(true);
+        CursorManager.Instance.CursorHandler(true);
     }
     private void OnDisable()
     {
-        ((GameNetworkManager)(NetworkManager.singleton)).CursorHandler(false);
+        CursorManager.Instance.CursorHandler(false);
     }
     public void ClosePanel()
     {

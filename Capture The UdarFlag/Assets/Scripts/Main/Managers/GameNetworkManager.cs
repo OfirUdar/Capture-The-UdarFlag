@@ -18,9 +18,7 @@ public class GameNetworkManager : NetworkManager
     [SerializeField] private GameManager _gameManagerPfb;
     [SerializeField] private Base _basePfb;
     [SerializeField] private Flag _flagPfb;
-    [Space]
-    [SerializeField] private Texture2D _cursorTextureUI;
-    [SerializeField] private Texture2D _cursorMainGame;
+   
 
     private NetworkStartPosition[] _basePoints;
 
@@ -228,23 +226,11 @@ public class GameNetworkManager : NetworkManager
     public override void OnClientSceneChanged(NetworkConnection conn)
     {
         base.OnClientSceneChanged(conn);
-        CursorHandler();
         if (conn.identity.hasAuthority && !SceneManager.GetActiveScene().path.Equals(menuScene))
             conn.identity.GetComponent<GamePlayer>().AuthorityChangedToMainScene();
     }
 
-    [Client]
-    public void CursorHandler(bool isUIActive = false)
-    {
-        if (isUIActive || SceneManager.GetActiveScene().path.Equals(menuScene))
-        {
-            Cursor.SetCursor(_cursorTextureUI, Vector2.zero, CursorMode.Auto);
-        }
-        else
-        {
-            Cursor.SetCursor(_cursorMainGame, Vector2.zero, CursorMode.Auto);
-        }
-    }
+
     #endregion
 
 
