@@ -128,6 +128,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6533758271715356950, guid: 618c6f56fcd29864c8aa6025b224ddb1, type: 3}
   m_PrefabInstance: {fileID: 6533758272097681539}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &528712851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1969096792695506435, guid: 867e5c72da80e2143bf6514fb7bde2ad, type: 3}
+  m_PrefabInstance: {fileID: 1603066327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &528712856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528712851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea368fb6f27ec2f40a40e20977992b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Channels: 0200000001000000
+  Timeout: 25
+  SteamAppID: 480
+  AllowSteamRelay: 1
+  UseNextGenSteamNetworking: 1
+  SteamUserID: 0
+--- !u!114 &528712857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528712851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4bffeda13d7a748973ff9204401c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &666681360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605,10 +640,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameNetworkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1969096792695506460, guid: 867e5c72da80e2143bf6514fb7bde2ad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1969096792695506461, guid: 867e5c72da80e2143bf6514fb7bde2ad, type: 3}
       propertyPath: mainScene
       value: Assets/Scenes/Map_01_Scene.unity
       objectReference: {fileID: 0}
+    - target: {fileID: 1969096792695506461, guid: 867e5c72da80e2143bf6514fb7bde2ad, type: 3}
+      propertyPath: transport
+      value: 
+      objectReference: {fileID: 528712856}
     - target: {fileID: 1969096792695506461, guid: 867e5c72da80e2143bf6514fb7bde2ad, type: 3}
       propertyPath: tutorialScene
       value: Assets/Scenes/Tutorial_Scene.unity
@@ -2051,6 +2094,10 @@ PrefabInstance:
     - target: {fileID: 3785473249088473841, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785473249124048517, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
+      propertyPath: _useSteam
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3785473249124048519, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
       propertyPath: m_Color.a

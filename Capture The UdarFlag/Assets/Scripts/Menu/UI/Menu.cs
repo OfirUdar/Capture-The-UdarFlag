@@ -1,4 +1,5 @@
 ﻿using Mirror;
+using Steamworks;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    
+    
     [SerializeField] private GameObject _lobbyPanel;
     [SerializeField] private GameObject _joinPanel;
     [SerializeField] private Panel _exitPanel;
@@ -18,11 +21,25 @@ public class Menu : MonoBehaviour
 
     private bool _isTutorialMade;
 
-  
+
+    //Steam
+    [Space]
+    [SerializeField] private bool _useSteam = false;
+
+    protected Callback<LobbyCreated_t> _lobbyCreated;
+    protected Callback<GameLobbyJoinRequested_t> _lobbyJoinRequested;
+    protected Callback<LobbyEnter_t> _lobbyEntered;
+    private CSteamID _lastLobbyId;
+
     private void OnEnable()
     {       
         GameNetworkManager.ClientOnConnect += HandleClientOnConnect;
         GameNetworkManager.ClientOnDisconnect += HandleClientOnDisconnect;
+        if(_lastLobbyId!=default)
+        {
+            SteamMatchmaking.LeaveLobby(_lastLobbyId);
+            _lastLobbyId = default;
+        }
     }
     private void OnDisable()
     {
@@ -31,6 +48,13 @@ public class Menu : MonoBehaviour
     }
     private void Start()
     {
+        Setup();
+        if (_useSteam)
+            SteamSetup();
+    }
+
+    private void Setup()
+    {
         _playerNameInputField.text = PlayerPrefs.GetString("PlayerName", "");
         _isTutorialMade = PlayerPrefs.GetInt("IsTutorialMade", 0) == 1;
 
@@ -38,7 +62,6 @@ public class Menu : MonoBehaviour
             StartHost();
         Cursor.visible = true;
     }
-
 
 
     private void Update()
@@ -74,6 +97,12 @@ public class Menu : MonoBehaviour
     }
     public void StartHost()
     {
+        if(_useSteam)
+        {
+            SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly,
+                ((GameNetworkManager)NetworkManager.singleton).gameSettings.GetMaxPlayers());
+            return;
+        }
         NetworkManager.singleton.networkAddress = "localHost";
         NetworkManager.singleton.StartHost();
     }
@@ -102,4 +131,41 @@ public class Menu : MonoBehaviour
     }
 
     
+
+    //Steam
+
+    private void SteamSetup()
+    {
+        _lobbyCreated = Callback<LobbyCreated_t>.Create(OnLobbyCreated);
+        _lobbyJoinRequested = Callback<GameLobbyJoinRequested_t>.Create(OnLobbyJoinRequested);
+        _lobbyEntered = Callback<LobbyEnter_t>.Create(OnLobbyEntered);
+    }
+
+
+    private void OnLobbyCreated(LobbyCreated_t callback)
+    {
+        if (callback.m_eResult != EResult.k_EResultOK) { return; }
+
+        NetworkManager.singleton.StartHost();
+
+        SteamMatchmaking.SetLobbyData(new CSteamID(callback.m_ulSteamIDLobby),
+            "HostAdress",
+            SteamUser.GetSteamID().ToString());
+    }  
+    private void OnLobbyJoinRequested(GameLobbyJoinRequested_t callback)
+    {
+        SteamMatchmaking.JoinLobby(callback.m_steamIDLobby);
+    }
+    private void OnLobbyEntered(LobbyEnter_t callback)
+    {
+        if (NetworkServer.active) { return; }
+
+        _lastLobbyId = new CSteamID(callback.m_ulSteamIDLobby);
+        string hostAdress = SteamMatchmaking.GetLobbyData(_lastLobbyId
+            , "HostAdress");
+        NetworkManager.singleton.networkAddress = hostAdress;
+        NetworkManager.singleton.StartClient();
+    }
+
+
 }
