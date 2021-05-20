@@ -1,2 +1,2 @@
-# Capture-The-UdarFlag
+# Capture The UdarFlag
 Unity Networking Multiplayer Project
