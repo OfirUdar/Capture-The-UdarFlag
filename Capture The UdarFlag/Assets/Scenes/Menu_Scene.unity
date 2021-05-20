@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0.54
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 04b49795d44eb2242b86d0500d560d8a, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 56113b3b655ab7349bab4d7d405c258a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7119253, g: 0.47384888, b: 0.30826905, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -253,11 +253,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1309095466835327010, guid: 9d80503f1673399419b149f9ca132a2c, type: 3}
   m_PrefabInstance: {fileID: 666681360}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &741372334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3785473249564927111, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
+  m_PrefabInstance: {fileID: 3785473249455237955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &819176575 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3785473249124048512, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
   m_PrefabInstance: {fileID: 3785473249455237955}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1115284926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3785473250155212188, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
+  m_PrefabInstance: {fileID: 3785473249455237955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1130550479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2099,6 +2121,14 @@ PrefabInstance:
       propertyPath: _useSteam
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3785473249124048517, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
+      propertyPath: _joinButton
+      value: 
+      objectReference: {fileID: 1115284926}
+    - target: {fileID: 3785473249124048517, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
+      propertyPath: _joinButtonPanel
+      value: 
+      objectReference: {fileID: 741372334}
     - target: {fileID: 3785473249124048519, guid: 78840a6157b7f1a4e828dbc574b9caa4, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -3022,13 +3052,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6109595428351109727}
-  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 5.11, z: -17.98}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!114 &6109595428351109723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3130,6 +3160,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 18964756853907655, guid: 618c6f56fcd29864c8aa6025b224ddb1, type: 3}
+      propertyPath: m_Intensity
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 18964756853907655, guid: 618c6f56fcd29864c8aa6025b224ddb1, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 17920

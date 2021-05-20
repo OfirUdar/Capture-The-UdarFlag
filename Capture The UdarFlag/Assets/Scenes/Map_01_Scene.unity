@@ -454,6 +454,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: ad234251ab7ef7547955aae00a28bb2d, type: 2}
+    - target: {fileID: 2497292505084664807, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2842271438810378372, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
       propertyPath: m_Material
       value: 
@@ -585,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6552723024329409963, guid: cf5ed0b257f4e75478470382553e6fc7, type: 3}
       propertyPath: m_Shadows.m_Strength
-      value: 0.025
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6552723024329409964, guid: cf5ed0b257f4e75478470382553e6fc7, type: 3}
       propertyPath: m_RootOrder

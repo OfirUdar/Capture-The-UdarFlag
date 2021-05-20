@@ -1,5 +1,4 @@
 ﻿using Mirror;
-using Steamworks;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -129,7 +128,6 @@ public class Lobby : MonoBehaviour
 
     private void HandleOnStopClient()
     {
-        SteamMatchmaking.LeaveLobby();
         ScreenChanger.Instance.LoadPanel(this.gameObject, _menuPanel);
     }
 }

@@ -15,11 +15,11 @@ F:/Desktop Shortcut/Unity Projects/Capture-The-UdarFlag/Capture The UdarFlag
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49817
+50590
 Successfully changed project path to: F:/Desktop Shortcut/Unity Projects/Capture-The-UdarFlag/Capture The UdarFlag
 F:/Desktop Shortcut/Unity Projects/Capture-The-UdarFlag/Capture The UdarFlag
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 99.84 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 93.88 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.6f1 (338bb68529b2)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/UnitySubsystems
@@ -36,16 +36,215 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56772
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007423 seconds.
+Registered in 0.001694 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 99.66 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 82.59 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  9.443 seconds
+- Completed reload, in  1.878 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.044499 seconds.
+Registered in 0.002833 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 88.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Find all reader and writers took 127 milliseconds
+Script Module: UnityEngine.UI.dll
+Weave behaviours and messages took75 milliseconds
+Find all reader and writers took 101 milliseconds
+Script Module: Unity.RenderPipelines.Core.Runtime.dll
+Weave behaviours and messages took57 milliseconds
+Find all reader and writers took 103 milliseconds
+Script Module: UnityEngine.TestRunner.dll
+Weave behaviours and messages took27 milliseconds
+Find all reader and writers took 100 milliseconds
+Script Module: Unity.Mathematics.dll
+Weave behaviours and messages took184 milliseconds
+Find all reader and writers took 109 milliseconds
+Script Module: SimpleWebTransport.dll
+Weave behaviours and messages took5 milliseconds
+Find all reader and writers took 107 milliseconds
+Script Module: Unity.RenderPipelines.Universal.Runtime.dll
+Weave behaviours and messages took60 milliseconds
+Find all reader and writers took 95 milliseconds
+Script Module: Unity.Animation.Rigging.dll
+Weave behaviours and messages took15 milliseconds
+Find all reader and writers took 102 milliseconds
+Script Module: Unity.Burst.dll
+Weave behaviours and messages took37 milliseconds
+Find all reader and writers took 114 milliseconds
+Script Module: Unity.TextMeshPro.dll
+Weave behaviours and messages took79 milliseconds
+Find all reader and writers took 92 milliseconds
+Script Module: Unity.Timeline.dll
+Weave behaviours and messages took27 milliseconds
+Find all reader and writers took 97 milliseconds
+Script Module: Telepathy.dll
+Weave behaviours and messages took2 milliseconds
+Find all reader and writers took 98 milliseconds
+Script Module: Mirror.Cloud.dll
+Weave behaviours and messages took5 milliseconds
+Find all reader and writers took 96 milliseconds
+Script Module: kcp2k.dll
+Weave behaviours and messages took3 milliseconds
+Find all reader and writers took 90 milliseconds
+Script Module: Unity.RenderPipelines.Core.ShaderLibrary.dll
+Weave behaviours and messages took0 milliseconds
+Find all reader and writers took 96 milliseconds
+Script Module: Unity.RenderPipeline.Universal.ShaderLibrary.dll
+Weave behaviours and messages took0 milliseconds
+Find all reader and writers took 92 milliseconds
+Script Module: Unity.RenderPipelines.Universal.Shaders.dll
+Weave behaviours and messages took0 milliseconds
+Find all reader and writers took 91 milliseconds
+Script Module: Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+Weave behaviours and messages took0 milliseconds
+Find all reader and writers took 130 milliseconds
+Script Module: UnityEditor.TestRunner.dll
+Weave behaviours and messages took34 milliseconds
+Find all reader and writers took 102 milliseconds
+Script Module: Mirror.CompilerSymbols.dll
+Weave behaviours and messages took0 milliseconds
+Find all reader and writers took 127 milliseconds
+Script Module: UnityEditor.UI.dll
+Weave behaviours and messages took10 milliseconds
+Find all reader and writers took 99 milliseconds
+Script Module: Unity.ShaderGraph.Utilities.dll
+Weave behaviours and messages took0 milliseconds
+Mono: successfully reloaded assembly
+- Completed reload, in  9.067 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3068 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.0 MB.
+System memory in use after: 179.2 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3537.
+Total: 4.675900 ms (FindLiveObjects: 0.810900 ms CreateObjectMapping: 0.294500 ms MarkObjects: 3.527600 ms  DeleteObjects: 0.032700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Plugins/ScriptTemplates/56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt
+  artifactKey: Guid(04337367db30af3459bf9e9f3f880734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/ScriptTemplates/56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt using Guid(04337367db30af3459bf9e9f3f880734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23aeebb3fde546258c59afa863dac4ae') in 0.051731 seconds
+  Import took 0.084350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.875932 seconds.
+  path: Assets/Settings/Custom_Renderer.asset
+  artifactKey: Guid(9a90af94118961d4e9941c4e3f4a2c1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/Custom_Renderer.asset using Guid(9a90af94118961d4e9941c4e3f4a2c1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5741d3e1a5a8ac2bccf6cce27fd613c1') in 0.015261 seconds
+  Import took 0.022021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Settings/UniversalRP-LowQuality.asset
+  artifactKey: Guid(a31e9f9f9c9d4b9429ed0d1234e22103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/UniversalRP-LowQuality.asset using Guid(a31e9f9f9c9d4b9429ed0d1234e22103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b698d6bda07e827ff43c0101ea1a67') in 0.004228 seconds
+  Import took 0.026724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Settings/UniversalRP-MediumQuality.asset
+  artifactKey: Guid(d847b876476d3d6468f5dfcd34266f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/UniversalRP-MediumQuality.asset using Guid(d847b876476d3d6468f5dfcd34266f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dd42057afa1148dfaf49eaad27de8a0') in 0.003803 seconds
+  Import took 0.011162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 339.105980 seconds.
+  path: Assets/Scenes/Menu_Scene.unity
+  artifactKey: Guid(703aeb5c38c7960419f4674a16627173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu_Scene.unity using Guid(703aeb5c38c7960419f4674a16627173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f53e01af6bfc5219ae5ae96ffb78329c') in 0.003116 seconds
+  Import took 0.023904 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002768 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.338 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2937 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.8 MB.
+System memory in use after: 170.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3544.
+Total: 3.539300 ms (FindLiveObjects: 0.439400 ms CreateObjectMapping: 0.300400 ms MarkObjects: 2.777300 ms  DeleteObjects: 0.020900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.093250 seconds.
+  path: Assets/Scenes/Menu_Scene.unity
+  artifactKey: Guid(703aeb5c38c7960419f4674a16627173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Menu_Scene.unity using Guid(703aeb5c38c7960419f4674a16627173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fce565c69bc9faa6c63b4e16fb4c56bf') in 0.015683 seconds
+  Import took 0.029879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Scenes/Map_01_Scene.unity
+  artifactKey: Guid(c9fc6dc8dcbedb64bb04af3b62768a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map_01_Scene.unity using Guid(c9fc6dc8dcbedb64bb04af3b62768a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e7fe52d2432230230a1273b82fd0b02') in 0.002615 seconds
+  Import took 0.008755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.757907 seconds.
+  path: Assets/Scenes/Map_01_Scene.unity
+  artifactKey: Guid(c9fc6dc8dcbedb64bb04af3b62768a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map_01_Scene.unity using Guid(c9fc6dc8dcbedb64bb04af3b62768a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff22c9c148b9d26aef41ea57cdbc6610') in 0.002527 seconds
+  Import took 0.008460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.114468 seconds.
+  path: Assets/Scenes/Tutorial_Scene.unity
+  artifactKey: Guid(254b8cffda607bf4d89daa4753042db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_Scene.unity using Guid(254b8cffda607bf4d89daa4753042db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65435e039d2946a7a0acb4a0145e8278') in 0.003196 seconds
+  Import took 0.019414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.659858 seconds.
+  path: Assets/Scenes/Tutorial_Scene
+  artifactKey: Guid(66cbac6e206d81c4baf8a55cdf957ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_Scene using Guid(66cbac6e206d81c4baf8a55cdf957ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59428fe989ba590688aa2da6fed27440') in 0.003286 seconds
+  Import took 0.011611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002153 seconds.
+  path: Assets/Scenes/Tutorial_Scene
+  artifactKey: Guid(66cbac6e206d81c4baf8a55cdf957ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial_Scene using Guid(66cbac6e206d81c4baf8a55cdf957ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59428fe989ba590688aa2da6fed27440') in 0.002246 seconds
+  Import took 0.008636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.505413 seconds.
+  path: Assets/Scenes/Main_Scene_Profiles/Post-Processing Profile.asset
+  artifactKey: Guid(29949773a6a80614ab45407608d3ab9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main_Scene_Profiles/Post-Processing Profile.asset using Guid(29949773a6a80614ab45407608d3ab9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de181832ff8180cd90dfaead74f2168d') in 0.024057 seconds
+  Import took 0.043277 seconds .
+

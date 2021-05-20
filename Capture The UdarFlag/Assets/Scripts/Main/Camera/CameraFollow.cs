@@ -1,5 +1,4 @@
-﻿using Cinemachine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class CameraFollow : MonoBehaviour
@@ -28,17 +27,7 @@ public class CameraFollow : MonoBehaviour
     public void SetupCamera(Transform targetFollow)
     {
         StartCoroutine(ChangeTheSmoothTime(_smoothTime));
-        this.targetFollow = targetFollow;
-        //if (targetFollow.eulerAngles.y == 180)
-        //{
-        //    Vector3 newRotation = transform.eulerAngles;
-        //    newRotation.y = 180;
-        //    transform.eulerAngles = newRotation;
-        //    _offset.z *= -1;
-
-        //    return true; //camera mode reverse
-        //}
-        //return false; // camera mode standard 
+        this.targetFollow = targetFollow; 
     }
     private IEnumerator ChangeTheSmoothTime(float targetSmoothTime)
     {

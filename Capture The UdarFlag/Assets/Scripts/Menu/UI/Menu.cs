@@ -15,6 +15,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject _joinPanel;
     [SerializeField] private Panel _exitPanel;
     [SerializeField] private Button _joinButton;
+    [SerializeField] private Button _joinButtonPanel;
     [SerializeField] private TMP_InputField _ipInputField;
     [SerializeField] private TMP_InputField _playerNameInputField;
 
@@ -88,12 +89,12 @@ public class Menu : MonoBehaviour
         }
         NetworkManager.singleton.networkAddress = _ipInputField.text;
         NetworkManager.singleton.StartClient();
-        _joinButton.interactable = false;
+        _joinButtonPanel.interactable = false;
     }
     public void CancelJoin()
     {
         NetworkManager.singleton.StopClient();
-        _joinButton.interactable = true;
+        _joinButtonPanel.interactable = true;
     }
     public void StartHost()
     {
@@ -116,7 +117,7 @@ public class Menu : MonoBehaviour
         if(_isTutorialMade)
         {
             _joinPanel.SetActive(false);
-            _joinButton.interactable = true;
+            _joinButtonPanel.interactable = true;
             ScreenChanger.Instance.LoadPanel(this.gameObject, _lobbyPanel);
         }
         else
@@ -127,7 +128,7 @@ public class Menu : MonoBehaviour
     }
     private void HandleClientOnDisconnect()
     {
-        _joinButton.interactable = true;
+        _joinButtonPanel.interactable = true;
     }
 
     
@@ -139,6 +140,7 @@ public class Menu : MonoBehaviour
         _lobbyCreated = Callback<LobbyCreated_t>.Create(OnLobbyCreated);
         _lobbyJoinRequested = Callback<GameLobbyJoinRequested_t>.Create(OnLobbyJoinRequested);
         _lobbyEntered = Callback<LobbyEnter_t>.Create(OnLobbyEntered);
+        _joinButton.interactable = false;
     }
 
 

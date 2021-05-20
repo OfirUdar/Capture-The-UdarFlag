@@ -25,7 +25,6 @@ public class PlayerMovement : NetworkBehaviour
 
     //Movement
     private Vector3 _serverMovement;
-    private bool _isCameraOnReverseMode = false;
     //Anim
     private bool _isSentMovementToServer = false; // it means that when the player stop inputing send once to server that the movement is 0    
     private float _velocityZ;
@@ -236,10 +235,8 @@ public class PlayerMovement : NetworkBehaviour
     {
         CameraFollow[] camerasFollow = FindObjectsOfType<CameraFollow>();
         foreach(CameraFollow cameraFollow in camerasFollow)
-        {
             cameraFollow.SetupCamera(this.transform);
-            //_isCameraOnReverseMode = cameraFollow.SetupCamera(this.transform);
-        }      
+             
     }
 
     [Client]
@@ -258,7 +255,6 @@ public class PlayerMovement : NetworkBehaviour
     {
         //Vector3 movement = new Vector3(horizontal, 0f, vertical);
         Vector3 movement = new Vector3(vertical, 0f, -horizontal);
-        //movement *= _isCameraOnReverseMode ? -1 : 1;
         if (movement.x != 0 || movement.z != 0)
         {
             if (isDashing)
