@@ -16,6 +16,12 @@ If this happens the opponent has two options:
 * His teamate revive him by stading next to him.
 * Wait ten seconds until next respawn.
 
-There is also an option to play with friends on Steam.
-
 In this project I used some plugins such as Mirror Networking and some packages of 3D models.
+
+# Play on Steam with your friends!
+
+1.Mark in V the "Use Steam" variable in the GameNetworkManager prefab.
+2.Go to Steam and add non-Steam game to your library.
+3.Launch the game and join to the lobby by clicking Join Game to the friend who host.
+
+NOTE: Your friends and you must has the build of the game and launch the game through Steam.
