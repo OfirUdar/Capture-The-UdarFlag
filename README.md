@@ -25,3 +25,8 @@ In this project I used some plugins such as Mirror Networking and some packages 
  3. Launch the game and join to the lobby by clicking Join Game to the friend who host.
 
 * NOTE: Your friends and you must has the build of the game and launch the game through Steam.
+# Images
+![Map_01](https://user-images.githubusercontent.com/76158235/119138730-dd6a2780-ba4a-11eb-9b51-f3b8762d2f00.jpg)
+![Map_02](https://user-images.githubusercontent.com/76158235/119138733-de9b5480-ba4a-11eb-916a-42bf0f2c4e93.jpg)
+![Map_03](https://user-images.githubusercontent.com/76158235/119138734-dfcc8180-ba4a-11eb-8a3e-d32035f2f9ac.jpg
+![Lobby](https://user-images.githubusercontent.com/76158235/119138721-da6f3700-ba4a-11eb-9147-58f93d0c8177.jpg)
