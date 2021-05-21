@@ -13,7 +13,7 @@ The map is scattered with items and weapons that each player can take and use to
 
 When there is a dead opponent, you can extend his respawn by standing next to him for a few seconds.
 If this happens the opponent has two options:
-* His teamate revive him by stading next to him.
+* His teamate revive him by standing next to him.
 * Wait ten seconds until next respawn.
 
 In this project I used some plugins such as Mirror Networking and some packages of 3D models.
