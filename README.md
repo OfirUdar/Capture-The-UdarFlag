@@ -20,8 +20,8 @@ In this project I used some plugins such as Mirror Networking and some packages 
 
 # Play on Steam with your friends!
 
-*1.Mark in V the "Use Steam" variable in the GameNetworkManager prefab.
-*2.Go to Steam and add non-Steam game to your library.
-*3.Launch the game and join to the lobby by clicking Join Game to the friend who host.
+* 1.Mark in V the "Use Steam" variable in the GameNetworkManager prefab.
+* 2.Go to Steam and add non-Steam game to your library.
+* 3.Launch the game and join to the lobby by clicking Join Game to the friend who host.
 
-*NOTE: Your friends and you must has the build of the game and launch the game through Steam.
+* NOTE: Your friends and you must has the build of the game and launch the game through Steam.
