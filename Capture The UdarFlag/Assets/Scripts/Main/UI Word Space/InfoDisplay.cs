@@ -7,8 +7,7 @@ using Mirror;
 
 public class InfoDisplay : MonoBehaviour
 {
-    [SerializeField] private GameObject _infoDisplayCanvas;
-    [Space]
+
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private Image _circleFlagImage;
     [Header("Health Display")]

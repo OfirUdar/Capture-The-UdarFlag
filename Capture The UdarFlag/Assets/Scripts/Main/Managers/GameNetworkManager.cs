@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class GameNetworkManager : NetworkManager
 {
+    [Space(3)]
+    public bool useSteam = false;
+    [SerializeField] private Transport _steamTransport;
+    [SerializeField] private Transport _defualtTransport;
     [Space]
     public GameSettings gameSettings;
     [Scene] public string mainScene = "Main_Scene";
@@ -18,11 +22,11 @@ public class GameNetworkManager : NetworkManager
     [SerializeField] private GameManager _gameManagerPfb;
     [SerializeField] private Base _basePfb;
     [SerializeField] private Flag _flagPfb;
-   
+
 
     private NetworkStartPosition[] _basePoints;
 
-    private int _joinedPlayers=0; // the num player that has joined to the Main Scene
+    private int _joinedPlayers = 0; // the num player that has joined to the Main Scene
 
 
 
@@ -53,9 +57,9 @@ public class GameNetworkManager : NetworkManager
     {
         _joinedPlayers++;
 
-        if(_joinedPlayers==numPlayers) // when all the players join to the Main Scene create the game!
+        if (_joinedPlayers == numPlayers) // when all the players join to the Main Scene create the game!
         {
-                Invoke(nameof(CreateGame),.2f);           
+            Invoke(nameof(CreateGame), .2f);
         }
         return numPlayers - _joinedPlayers; // return the rest players
     }
@@ -63,6 +67,24 @@ public class GameNetworkManager : NetworkManager
     public void StartTutorial()
     {
         ScreenChanger.Instance.LoadScene(tutorialScene);
+    }
+
+
+    public override void Awake()
+    {
+        if(useSteam)
+        {
+            transport = _steamTransport;
+            _defualtTransport.enabled = false;
+        }
+        else
+        {
+            transport = _defualtTransport;
+            _steamTransport.enabled = false;
+        }
+       
+
+        base.Awake();
     }
 
 

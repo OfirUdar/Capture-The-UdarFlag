@@ -9,8 +9,8 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    
-    
+
+
     [SerializeField] private GameObject _lobbyPanel;
     [SerializeField] private GameObject _joinPanel;
     [SerializeField] private Panel _exitPanel;
@@ -23,9 +23,6 @@ public class Menu : MonoBehaviour
     private bool _isTutorialMade;
 
 
-    //Steam
-    [Space]
-    [SerializeField] private bool _useSteam = false;
 
     protected Callback<LobbyCreated_t> _lobbyCreated;
     protected Callback<GameLobbyJoinRequested_t> _lobbyJoinRequested;
@@ -33,10 +30,10 @@ public class Menu : MonoBehaviour
     private CSteamID _lastLobbyId;
 
     private void OnEnable()
-    {       
+    {
         GameNetworkManager.ClientOnConnect += HandleClientOnConnect;
         GameNetworkManager.ClientOnDisconnect += HandleClientOnDisconnect;
-        if(_lastLobbyId!=default)
+        if (_lastLobbyId != default)
         {
             SteamMatchmaking.LeaveLobby(_lastLobbyId);
             _lastLobbyId = default;
@@ -50,7 +47,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         Setup();
-        if (_useSteam)
+        if (((GameNetworkManager)NetworkManager.singleton).useSteam)
             SteamSetup();
     }
 
@@ -98,7 +95,7 @@ public class Menu : MonoBehaviour
     }
     public void StartHost()
     {
-        if(_useSteam)
+        if (((GameNetworkManager)NetworkManager.singleton).useSteam)
         {
             SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly,
                 ((GameNetworkManager)NetworkManager.singleton).gameSettings.GetMaxPlayers());
@@ -114,7 +111,7 @@ public class Menu : MonoBehaviour
 
     private void HandleClientOnConnect()
     {
-        if(_isTutorialMade)
+        if (_isTutorialMade)
         {
             _joinPanel.SetActive(false);
             _joinButtonPanel.interactable = true;
@@ -124,14 +121,14 @@ public class Menu : MonoBehaviour
         {
             ((GameNetworkManager)(NetworkManager.singleton)).StartTutorial();
         }
-       
+
     }
     private void HandleClientOnDisconnect()
     {
         _joinButtonPanel.interactable = true;
     }
 
-    
+
 
     //Steam
 
@@ -153,7 +150,7 @@ public class Menu : MonoBehaviour
         SteamMatchmaking.SetLobbyData(new CSteamID(callback.m_ulSteamIDLobby),
             "HostAdress",
             SteamUser.GetSteamID().ToString());
-    }  
+    }
     private void OnLobbyJoinRequested(GameLobbyJoinRequested_t callback)
     {
         SteamMatchmaking.JoinLobby(callback.m_steamIDLobby);

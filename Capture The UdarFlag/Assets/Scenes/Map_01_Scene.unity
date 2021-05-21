@@ -454,46 +454,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: ad234251ab7ef7547955aae00a28bb2d, type: 2}
-    - target: {fileID: 2497292505084664807, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2842271438810378372, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: ad234251ab7ef7547955aae00a28bb2d, type: 2}
-    - target: {fileID: 5453261051590136619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: _itemsToSpawn.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453261051590136619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: _itemsToSpawn.Array.data[2].amount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453261051590136619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: _itemsToSpawn.Array.data[3].amount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453261051590136619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: _itemsToSpawn.Array.data[4].amount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453261051590136619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: _itemsToSpawn.Array.data[5].amount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453261051590136619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: _itemsToSpawn.Array.data[6].amount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453261051590136619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: _itemsToSpawn.Array.data[7].amount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453261051590136619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
-      propertyPath: _itemsToSpawn.Array.data[7].itemPfb
-      value: 
-      objectReference: {fileID: 8244371176122550572, guid: cbf5270d27e274b4ab85d84138cfc98a, type: 3}
     - target: {fileID: 5453261052808051312, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
       propertyPath: m_RootOrder
       value: 11
