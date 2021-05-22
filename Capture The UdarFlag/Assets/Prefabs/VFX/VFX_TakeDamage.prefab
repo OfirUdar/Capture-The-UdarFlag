@@ -4885,6 +4885,7 @@ GameObject:
   - component: {fileID: 4585227493984934740}
   - component: {fileID: 7365249945928184010}
   - component: {fileID: 258077804426744817}
+  - component: {fileID: 1347977182498245973}
   m_Layer: 31
   m_Name: VFX_TakeDamage
   m_TagString: Untagged
@@ -5026,3 +5027,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1347977182498245973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563507064806036916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf161de04863a6745a3f2dbadacf8c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

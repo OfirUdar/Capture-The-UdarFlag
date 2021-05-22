@@ -7,12 +7,21 @@ using UnityEngine;
 public class ItemCollector : CircleFillerDetector
 {
     [SerializeField] private PlayerLinks _playerLinks;
-    [SerializeField] private Transform _itemHolder;
+    [SerializeField] private Transform _bagOB;
 
     private GamePlayer _connPlayer;
-
+    private Transform _rightHand;
 
     public static Action<bool, bool> ClientOnFlagCollected;
+
+
+    private void Start()
+    {
+        _rightHand = _playerLinks.animManager.animator.GetBoneTransform(HumanBodyBones.RightHand);
+        _bagOB.SetParent(_rightHand);
+        _bagOB.localPosition = Vector3.zero;
+        _bagOB.localRotation = Quaternion.Euler(Vector3.zero);
+    }
 
     [Server]
     protected override void StartFilling(CircleFiller circleFiller)
@@ -46,7 +55,7 @@ public class ItemCollector : CircleFillerDetector
             }
         }
         base.ServerOnFillEnd(itemIdentity);
-        item.ServerCollect(_itemHolder, connectionToClient);
+        item.ServerCollect(_bagOB, connectionToClient);
         _playerLinks.bagManager.ServerAddItem(item);
         RpcCollect(item);
     }
@@ -60,7 +69,7 @@ public class ItemCollector : CircleFillerDetector
     [ClientRpc]
     private void RpcCollect(Item item)
     {
-        item.ClientCollect(_itemHolder);
+        item.ClientCollect(_bagOB);
         if (hasAuthority)
             AudioManager.Instance.PlayOneShot("Collect");
     }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32736101cf0d7024fb2c26832529a49a, type: 3}
   m_Name: Cowboy_SO
   m_EditorClassIdentifier: 
-  model: {fileID: 6927024250304917055, guid: 2b0e025bc32c9784e8cd91abcbf1451c, type: 3}
-  prefab: {fileID: 924926180281402969, guid: 8f5bb041afe38ef43896adf236d51303, type: 3}
+  model: {fileID: 4483592291040563194, guid: 0b12e92d5efe9374484de88b8de10d31, type: 3}
+  prefab: {fileID: 4451400263486648192, guid: 1b4598b113e385543b2f3be951f66b6c, type: 3}

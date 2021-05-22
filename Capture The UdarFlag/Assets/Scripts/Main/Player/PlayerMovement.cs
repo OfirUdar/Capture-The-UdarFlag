@@ -130,7 +130,7 @@ public class PlayerMovement : NetworkBehaviour
     private void SprintStaminaOnNotRunning()
     {
         if (_currentSprintStamina < _maxSprintStamina)
-            _currentSprintStamina = Math.Min(_maxSprintStamina, _currentSprintStamina + 1);
+            _currentSprintStamina = Math.Min(_maxSprintStamina, _currentSprintStamina + 1.2f);
     }
 
     [Server]

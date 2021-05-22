@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32736101cf0d7024fb2c26832529a49a, type: 3}
   m_Name: Chicken_SO
   m_EditorClassIdentifier: 
-  model: {fileID: 4271372607080651020, guid: 2885f464b3cb6c94f93621ad7f0c7f5f, type: 3}
-  prefab: {fileID: 7657514412605129579, guid: a9725c5161fdb0049b7d9285f409029b, type: 3}
+  model: {fileID: 4483592291040563194, guid: 311bf83622457624c8207c89d6b71e85, type: 3}
+  prefab: {fileID: 4451400263486648192, guid: 28aff5a5f61235442a82cf702e544c5a, type: 3}

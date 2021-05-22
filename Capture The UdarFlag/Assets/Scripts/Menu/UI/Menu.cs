@@ -27,17 +27,11 @@ public class Menu : MonoBehaviour
     protected Callback<LobbyCreated_t> _lobbyCreated;
     protected Callback<GameLobbyJoinRequested_t> _lobbyJoinRequested;
     protected Callback<LobbyEnter_t> _lobbyEntered;
-    private CSteamID _lastLobbyId;
 
     private void OnEnable()
     {
         GameNetworkManager.ClientOnConnect += HandleClientOnConnect;
         GameNetworkManager.ClientOnDisconnect += HandleClientOnDisconnect;
-        if (_lastLobbyId != default)
-        {
-            SteamMatchmaking.LeaveLobby(_lastLobbyId);
-            _lastLobbyId = default;
-        }
     }
     private void OnDisable()
     {
@@ -157,10 +151,12 @@ public class Menu : MonoBehaviour
     }
     private void OnLobbyEntered(LobbyEnter_t callback)
     {
+        CSteamID lobbyID = new CSteamID(callback.m_ulSteamIDLobby);
+        ((GameNetworkManager)NetworkManager.singleton).currentLobbyID = lobbyID;
+
         if (NetworkServer.active) { return; }
 
-        _lastLobbyId = new CSteamID(callback.m_ulSteamIDLobby);
-        string hostAdress = SteamMatchmaking.GetLobbyData(_lastLobbyId
+        string hostAdress = SteamMatchmaking.GetLobbyData(lobbyID
             , "HostAdress");
         NetworkManager.singleton.networkAddress = hostAdress;
         NetworkManager.singleton.StartClient();

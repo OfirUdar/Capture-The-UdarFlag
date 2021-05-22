@@ -95,8 +95,6 @@ public class TeamsManager : NetworkBehaviour
         }
     }
 
-
-
     [Server]
     private Team CreateTeam(GamePlayer player)
     {

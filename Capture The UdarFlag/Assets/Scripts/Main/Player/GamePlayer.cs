@@ -67,6 +67,7 @@ public class GamePlayer : NetworkBehaviour
         playerManager = Instantiate(_characterToSpawn.prefab).GetComponent<PlayerManager>();
         NetworkServer.Spawn(playerManager.gameObject, connectionToClient);
         playerManager.playerLinks.gamePlayer = this;
+        playerManager.PlayerPositionToBase();
         RpcSpawnedCharacter(playerManager);
     }
 

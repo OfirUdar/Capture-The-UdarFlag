@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32736101cf0d7024fb2c26832529a49a, type: 3}
   m_Name: Knight_SO
   m_EditorClassIdentifier: 
-  model: {fileID: 6358898970364181096, guid: ba4f3004994a64b49997b4e791c43545, type: 3}
-  prefab: {fileID: 2441974338144981348, guid: 43f4def0f0464454daccff4c72868ade, type: 3}
+  model: {fileID: 4483592291040563194, guid: 69eb7e1dc25632047b2a97c56b2412fe, type: 3}
+  prefab: {fileID: 4451400263486648192, guid: 28de93bb576547f42aa73f4fde198881, type: 3}

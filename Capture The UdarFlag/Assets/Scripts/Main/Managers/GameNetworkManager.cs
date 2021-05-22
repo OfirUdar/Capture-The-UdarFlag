@@ -1,4 +1,5 @@
 ﻿using Mirror;
+using Steamworks;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,8 +9,10 @@ using UnityEngine.SceneManagement;
 public class GameNetworkManager : NetworkManager
 {
     [Space(3)]
+    //Steam
     public bool useSteam = false;
     [SerializeField] private Transport _steamTransport;
+    [SerializeField] private SteamManager _steamManager;
     [SerializeField] private Transport _defualtTransport;
     [Space]
     public GameSettings gameSettings;
@@ -28,7 +31,8 @@ public class GameNetworkManager : NetworkManager
 
     private int _joinedPlayers = 0; // the num player that has joined to the Main Scene
 
-
+    //Steam
+    [HideInInspector] public CSteamID currentLobbyID;
 
 
     public static event Action ClientOnConnect;
@@ -53,16 +57,7 @@ public class GameNetworkManager : NetworkManager
         ScreenChanger.Instance.LoadScene(mainScene);
     }
 
-    public int AddPlayerJoinedTheMainScene()
-    {
-        _joinedPlayers++;
 
-        if (_joinedPlayers == numPlayers) // when all the players join to the Main Scene create the game!
-        {
-            Invoke(nameof(CreateGame), .2f);
-        }
-        return numPlayers - _joinedPlayers; // return the rest players
-    }
 
     public void StartTutorial()
     {
@@ -72,7 +67,7 @@ public class GameNetworkManager : NetworkManager
 
     public override void Awake()
     {
-        if(useSteam)
+        if (useSteam)
         {
             transport = _steamTransport;
             _defualtTransport.enabled = false;
@@ -81,8 +76,9 @@ public class GameNetworkManager : NetworkManager
         {
             transport = _defualtTransport;
             _steamTransport.enabled = false;
+            _steamManager.enabled = false;
         }
-       
+
 
         base.Awake();
     }
@@ -109,8 +105,8 @@ public class GameNetworkManager : NetworkManager
         }
     }
     public override void OnServerDisconnect(NetworkConnection conn)
-    {
-        if (conn.identity.TryGetComponent(out GamePlayer playerDisconnect))
+    {        
+        if (conn.identity!=null&&conn.identity.TryGetComponent(out GamePlayer playerDisconnect))
         {
             if (playerDisconnect.playerManager != null)
             {
@@ -122,6 +118,7 @@ public class GameNetworkManager : NetworkManager
         }
 
         base.OnServerDisconnect(conn);
+
     }
 
     public override void OnStopServer()
@@ -148,6 +145,17 @@ public class GameNetworkManager : NetworkManager
             ScreenChanger.Instance.ClientLoadScene();
     }
 
+    [Server]
+    public int AddPlayerJoinedTheMainScene()
+    {
+        _joinedPlayers++;
+
+        if (_joinedPlayers == numPlayers) // when all the players join to the Main Scene create the game!
+        {
+            Invoke(nameof(CreateGame), .2f);
+        }
+        return numPlayers - _joinedPlayers; // return the rest players
+    }
 
     #region CreateGame
 
@@ -238,6 +246,9 @@ public class GameNetworkManager : NetworkManager
         if (!SceneManager.GetActiveScene().path.Equals(menuScene))
             ScreenChanger.Instance.LoadScene(menuScene, false);
         ClientOnStop?.Invoke();
+        if (useSteam)
+            SteamMatchmaking.LeaveLobby(currentLobbyID);
+
     }
     public override void OnClientChangeScene(string newSceneName, SceneOperation sceneOperation, bool customHandling)
     {

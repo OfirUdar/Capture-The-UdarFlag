@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 0
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!114 &5604676912234948222
@@ -84,7 +85,7 @@ MonoBehaviour:
   snapScaleThreshold: 0
   positionLerpSpeed: 1
   rotationLerpSpeed: 0.85
-  scaleLerpSpeed: 0.85
+  scaleLerpSpeed: 0
   timeCorrectionSpeed: 0.1
   snapTimeThreshold: 3
   syncPosition: 0
@@ -184,6 +185,10 @@ PrefabInstance:
       value: CircleFiller
       objectReference: {fileID: 0}
     - target: {fileID: 3507681695393608998, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507681695393608998, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -196,6 +201,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3507681695393608998, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507681695393608998, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -205,14 +214,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3507681695393608998, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3507681695393608998, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3507681695393608998, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3507681695393608998, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
@@ -232,13 +233,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8802520861039256441, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
-      propertyPath: _parentIdentity
-      value: 
-      objectReference: {fileID: 4546593261566378329}
-    - target: {fileID: 8802520861039256441, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
       propertyPath: _fillTime
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8802520861039256441, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
+      propertyPath: _parentIdentity
+      value: 
+      objectReference: {fileID: 4546593261566378329}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4b4bc36f4040b545b6f6346cca6acc8, type: 3}
 --- !u!4 &5174492790627339760 stripped

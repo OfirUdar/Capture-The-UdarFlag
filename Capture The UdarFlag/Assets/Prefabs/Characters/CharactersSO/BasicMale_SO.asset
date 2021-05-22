@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32736101cf0d7024fb2c26832529a49a, type: 3}
   m_Name: BasicMale_SO
   m_EditorClassIdentifier: 
-  model: {fileID: 1762018173025169312, guid: 90ac354aa9a675b409341015a05e6287, type: 3}
-  prefab: {fileID: 7000714563006871974, guid: b4b4f33b6eab2b0469db8219ec1539f2, type: 3}
+  model: {fileID: 7491496806281753889, guid: 90ac354aa9a675b409341015a05e6287, type: 3}
+  prefab: {fileID: 4910692486454701477, guid: 64246b82d89262f4abe5eb8b32c54772, type: 3}

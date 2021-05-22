@@ -5,7 +5,7 @@ using UnityEngine;
 using Mirror;
 public class PlayerAnimationManager : MonoBehaviour
 {
-    [SerializeField] private Animator _anim;
+    public Animator animator;
     [SerializeField] private NetworkAnimator _networkAnim;
 
 
@@ -29,7 +29,7 @@ public class PlayerAnimationManager : MonoBehaviour
 
     public void ActivateLayer(int layer, bool active)
     {
-        _anim.SetLayerWeight(layer, active ? 1 : 0);
+        animator.SetLayerWeight(layer, active ? 1 : 0);
     }
     public void LerpActivateLayer(int layer, bool active)
     {
@@ -37,20 +37,20 @@ public class PlayerAnimationManager : MonoBehaviour
     }
     private IEnumerator LerpingActivateLayer(int layer, float value)
     {
-        float currentValue = _anim.GetLayerWeight(layer);
+        float currentValue = animator.GetLayerWeight(layer);
         while (Mathf.Abs(currentValue - value) > 0.05f)
         {
             currentValue = Mathf.Lerp(currentValue, value, 0.1f);
-            _anim.SetLayerWeight(layer, currentValue);
+            animator.SetLayerWeight(layer, currentValue);
             yield return null;
         }
-        _anim.SetLayerWeight(layer, value);
+        animator.SetLayerWeight(layer, value);
     }
 
     public void SetVelocites(float velZ, float velX)
     {
-        _anim.SetFloat(_velocityZHash, velZ, 0.03f, Time.deltaTime);
-        _anim.SetFloat(_velocityXHash, velX, 0.03f, Time.deltaTime);
+        animator.SetFloat(_velocityZHash, velZ, 0.03f, Time.deltaTime);
+        animator.SetFloat(_velocityXHash, velX, 0.03f, Time.deltaTime);
     }
     public void Dash()
     {
@@ -58,15 +58,15 @@ public class PlayerAnimationManager : MonoBehaviour
     }
     public void SetAnimatorSpeed(float speed)
     {
-        _anim.speed = speed;
+        animator.speed = speed;
     }
     public void SetIsAiming(bool isAiming)
     {
-        _anim.SetBool(_isAimingHash, isAiming);
+        animator.SetBool(_isAimingHash, isAiming);
     }
     public void SetIsAimingThrow(bool isAimingThrow)
     {
-        _anim.SetBool(_isAimingThrowHash, isAimingThrow);
+        animator.SetBool(_isAimingThrowHash, isAimingThrow);
     }
     public void TriggerThrow(Action OnThrowPoint)
     {
@@ -81,7 +81,7 @@ public class PlayerAnimationManager : MonoBehaviour
 
     public void SetIsDead(bool isDead)
     {
-        _anim.SetBool(_isDeadHash, isDead);
+        animator.SetBool(_isDeadHash, isDead);
     }
 
 
@@ -102,11 +102,11 @@ public class PlayerAnimationManager : MonoBehaviour
     public void StartReload(Action OnReloadComplete)
     {
         _OnRealodComplete = OnReloadComplete;
-        _anim.SetBool(_isReloadingHash, true);
+        animator.SetBool(_isReloadingHash, true);
     }
     public void StopReload()
     {
-        _anim.SetBool(_isReloadingHash, false);
+        animator.SetBool(_isReloadingHash, false);
     }
 
     public void ReloadComplete()//called from event animation

@@ -50,4 +50,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78cbc0463d88d854eb5c2f552025b74f, type: 2}
   - {fileID: 11400000, guid: 1915d1521b3f9fb46adb20d1d73b66b0, type: 2}
   - {fileID: 11400000, guid: ed89dcd7cd5c4c34fa109ce22f646e80, type: 2}
+  - {fileID: 11400000, guid: c881fae0f50460a4089a747ae7063e42, type: 2}
+  - {fileID: 11400000, guid: 6d388d1f9f6e04b48ab47782deed5bc0, type: 2}
+  - {fileID: 11400000, guid: 369bfb80bceb63a47b35647fe1defa3a, type: 2}
+  - {fileID: 11400000, guid: dcbbb847804e74c45a1aa1de28c23d45, type: 2}
   _charactersContainer: {fileID: 0}

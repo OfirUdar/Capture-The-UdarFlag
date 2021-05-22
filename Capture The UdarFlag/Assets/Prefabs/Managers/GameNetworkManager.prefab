@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1969096792695506461}
   - component: {fileID: 1969096792695506460}
   - component: {fileID: 1969096792695506463}
+  - component: {fileID: 528712856}
+  - component: {fileID: 528712857}
   m_Layer: 0
   m_Name: GameNetworkManager
   m_TagString: Untagged
@@ -46,13 +48,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
+  PersistNetworkManagerToOfflineScene: 0
   runInBackground: 1
   autoStartServerBuild: 1
-  showDebugMessages: 0
   serverTickRate: 60
+  serverBatching: 1
+  serverBatchInterval: 0
   offlineScene: 
   onlineScene: 
-  transport: {fileID: 1969096792695506460}
+  transport: {fileID: 528712856}
   networkAddress: localhost
   maxConnections: 16
   disconnectInactiveConnections: 0
@@ -77,22 +81,34 @@ MonoBehaviour:
   - {fileID: 3831371273941024268, guid: f8cae676cf9409e4f944e8be34421e3d, type: 3}
   - {fileID: 3831371273941024268, guid: a7cc06f9aca57a24a8bba09e899259fc, type: 3}
   - {fileID: 6244073449153286140, guid: 9681b5ed0a7ab954fb44c364b650819c, type: 3}
-  - {fileID: 7000714563006871974, guid: 08cd410ed0440ce488260edc72157923, type: 3}
-  - {fileID: 7000714563006871974, guid: b4b4f33b6eab2b0469db8219ec1539f2, type: 3}
-  - {fileID: 7657514412605129579, guid: a9725c5161fdb0049b7d9285f409029b, type: 3}
-  - {fileID: 924926180281402969, guid: 8f5bb041afe38ef43896adf236d51303, type: 3}
-  - {fileID: 2441974338144981348, guid: 43f4def0f0464454daccff4c72868ade, type: 3}
-  - {fileID: 6588546103092617683, guid: 4cd80820f8507154899a9267f6ef046e, type: 3}
+  - {fileID: 3831371273941024268, guid: cbf5270d27e274b4ab85d84138cfc98a, type: 3}
+  - {fileID: 4910692486454701477, guid: 64246b82d89262f4abe5eb8b32c54772, type: 3}
+  - {fileID: 4451400263486648192, guid: f8dfddd3fb3b809478b2df5fc37e14b1, type: 3}
+  - {fileID: 4451400263486648192, guid: d25507937eefdfd45844719ef12398c3, type: 3}
+  - {fileID: 4451400263486648192, guid: 28de93bb576547f42aa73f4fde198881, type: 3}
+  - {fileID: 4451400263486648192, guid: 28aff5a5f61235442a82cf702e544c5a, type: 3}
+  - {fileID: 4451400263486648192, guid: 1b4598b113e385543b2f3be951f66b6c, type: 3}
+  - {fileID: 4451400263486648192, guid: 4f3fb8c52cc182644a5a32da5ae98fc0, type: 3}
+  - {fileID: 4451400263486648192, guid: 81f427e85d24f2e44998697eb1ad8e0e, type: 3}
+  - {fileID: 4451400263486648192, guid: 6dd5f7afdcef44249895bdf7c5ab0e74, type: 3}
+  - {fileID: 4451400263486648192, guid: f7bb5f9ddaa817e468a37bb7f10463ea, type: 3}
+  useSteam: 0
+  _steamTransport: {fileID: 528712856}
+  _steamManager: {fileID: 528712857}
+  _defualtTransport: {fileID: 1969096792695506460}
   gameSettings:
     numTeams: 2
     numPlayersInTeam: 4
-  mainScene: Assets/Scenes/Main_Scene.unity
+  mainScene: Assets/Scenes/Map_01_Scene.unity
   menuScene: Assets/Scenes/Menu_Scene.unity
+  tutorialScene: Assets/Scenes/Tutorial_Scene.unity
   _teamsManagerPfb: {fileID: 7645155822921825646, guid: e5cd7241299e7894194fd83ae85f47b9, type: 3}
   _poolManagerPfb: {fileID: 4085068581112269994, guid: caa0efeade5aa9a489ab2fa89b4008ce, type: 3}
   _gameManagerPfb: {fileID: 1477971320559204897, guid: f909a30482cee224a8688415abbfcffa, type: 3}
   _basePfb: {fileID: 6580288706896930332, guid: ee2af728ba8c86443b4c65e906ba8cf0, type: 3}
   _flagPfb: {fileID: 3385446584262920825, guid: 6a6cfee6c856d0546b41a1eed8de198c, type: 3}
+  currentLobbyID:
+    m_SteamID: 0
 --- !u!114 &1969096792695506460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +129,8 @@ MonoBehaviour:
   SendWindowSize: 128
   ReceiveWindowSize: 128
   debugLog: 0
-  debugGUI: 0
+  statisticsGUI: 0
+  statisticsLog: 0
 --- !u!114 &1969096792695506463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,9 +143,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc654f29862fc2643b948f772ebb9e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showPing: 1
-  showRoundTripTime: 1
-  position: {x: 200, y: 0}
-  fontSize: 24
-  textColor: {r: 1, g: 1, b: 1, a: 0.3137255}
-  format: '{0}ms'
+  color: {r: 1, g: 1, b: 1, a: 1}
+  padding: 2
+--- !u!114 &528712856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969096792695506435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea368fb6f27ec2f40a40e20977992b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Channels: 0200000001000000
+  Timeout: 25
+  SteamAppID: 480
+  AllowSteamRelay: 1
+  UseNextGenSteamNetworking: 1
+  SteamUserID: 0
+--- !u!114 &528712857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969096792695506435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4bffeda13d7a748973ff9204401c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

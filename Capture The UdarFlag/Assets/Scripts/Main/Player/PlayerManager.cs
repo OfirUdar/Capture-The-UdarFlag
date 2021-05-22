@@ -60,13 +60,7 @@ public class PlayerManager : NetworkBehaviour
         Vector3 newPlayerPos = playerLinks.gamePlayer.stats.PlayerTeam.BaseTeam.transform.position;
         newPlayerPos += new Vector3(UnityEngine.Random.Range(-2f, 2f), 0, UnityEngine.Random.Range(-2f, 2f));
         transform.position = newPlayerPos;
-        playerLinks.smoothSync.teleportOwnedObjectFromOwner();
     }
-    [Server]
-    public void PlayerRotationToBase()
-    {
-        transform.rotation = playerLinks.gamePlayer.stats.PlayerTeam.BaseTeam.transform.rotation;
-    }  
     [Server]
     private void ServerRespawn()
     {
@@ -169,11 +163,7 @@ public class PlayerManager : NetworkBehaviour
     }
     public override void OnStartClient()
     {
-        GameManager.ClientOnGameOver += ClientHandleGameOver;
-
-        PlayerPositionToBase();
-        PlayerRotationToBase();       
-
+        GameManager.ClientOnGameOver += ClientHandleGameOver;            
     }
     public override void OnStopClient()
     {

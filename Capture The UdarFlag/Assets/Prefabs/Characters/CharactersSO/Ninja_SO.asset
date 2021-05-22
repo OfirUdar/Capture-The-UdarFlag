@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32736101cf0d7024fb2c26832529a49a, type: 3}
   m_Name: Ninja_SO
   m_EditorClassIdentifier: 
-  model: {fileID: 6151683105359713233, guid: 39512dbe07c724041a4aef52be4899b7, type: 3}
-  prefab: {fileID: 6588546103092617683, guid: 4cd80820f8507154899a9267f6ef046e, type: 3}
+  model: {fileID: 4483592291040563194, guid: 5285ec715e145b946ae7afb103d04ca3, type: 3}
+  prefab: {fileID: 4451400263486648192, guid: 81f427e85d24f2e44998697eb1ad8e0e, type: 3}

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Mirror;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +25,11 @@ public class Settings_Panel : Panel
     {
         PlayerPrefs.SetFloat("MusicVolume", _musicVolumeSlider.value);
         AudioManager.Instance.MusicVolumeGame = _musicVolumeSlider.value;
+    }
+    public void StartTutorial()
+    {
+        NetworkManager.singleton.StartHost();
+        ((GameNetworkManager)NetworkManager.singleton).StartTutorial();
     }
 
 }

@@ -305,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 313891504980318411, guid: aacfb7888ffc4f642ae5b125ef8f4a60, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 313891504980318413, guid: aacfb7888ffc4f642ae5b125ef8f4a60, type: 3}
       propertyPath: _mainCamera
@@ -1018,6 +1018,10 @@ PrefabInstance:
     - target: {fileID: 2933654270654956082, guid: a24012097667be440a79a352fa27b0a7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933654270687085287, guid: a24012097667be440a79a352fa27b0a7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24012097667be440a79a352fa27b0a7, type: 3}
