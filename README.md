@@ -19,6 +19,9 @@ If this happens the opponent has two options:
 
 In this project I used some plugins such as Mirror Networking and some packages of 3D models.
 
+# Unity Version
+- Unity 2020.3.6f1
+
 # Play on Steam with your friends!
 
  1. Mark in V the "Use Steam" variable in the GameNetworkManager prefab.
