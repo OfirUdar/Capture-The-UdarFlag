@@ -9,8 +9,7 @@ public class GameManager : NetworkBehaviour
     public static GameManager Instance { get; private set; }
 
 
-    [Tooltip("The amount of flags (score) to win the game")]
-    public int flagsAmountTarget = 5;
+    private int _flagsAmountTarget;
 
 
     private bool _hasWinner;
@@ -30,6 +29,7 @@ public class GameManager : NetworkBehaviour
     private void Awake()
     {
         Instance = this;
+        _flagsAmountTarget = ((GameNetworkManager)NetworkManager.singleton).gameSettings.flagsAmountTarget;
     }
 
     private void Start()
@@ -60,7 +60,7 @@ public class GameManager : NetworkBehaviour
         if (_hasWinner) { return; }
         //it means there is no winner
 
-        if ( team.ScoreTeam >= flagsAmountTarget)
+        if ( team.ScoreTeam >= _flagsAmountTarget)
         {
             //this team won!
             WinTheGame(team);

@@ -31,7 +31,7 @@ public class TeamsManager : NetworkBehaviour
     #region Server
 
     [Server]
-    private bool TryGetTeamWithLessPlayers(out Team outTeam)
+    private bool TryGetTeamWithLessPlayers(out Team outTeam)//find the team with less players, return true if found
     {
         int minPlayers = 10000;
         bool hasTeamWithLessPlayers = false ;
@@ -50,11 +50,11 @@ public class TeamsManager : NetworkBehaviour
             }
         }
         return hasTeamWithLessPlayers; //No teams has capacity or there is no teams
-    }
+    } 
 
 
     [Server]
-    public void ServerAddPlayer(GamePlayer player)
+    public void ServerAddPlayer(GamePlayer player)// add player to team or create new team
     {
         if(Teams.Count< 
             ((GameNetworkManager)NetworkManager.singleton).gameSettings.numTeams)
@@ -70,9 +70,9 @@ public class TeamsManager : NetworkBehaviour
             }
         }
         
-    }
+    } 
     [Server]
-    public void ServerRemovePlayer(GamePlayer playerDisconnect)
+    public void ServerRemovePlayer(GamePlayer playerDisconnect)// remove player from team and if the team is empty - remove the team
     {
         Team team = playerDisconnect.stats.PlayerTeam;
         team.RemovePlayer(playerDisconnect.netId);
@@ -96,7 +96,7 @@ public class TeamsManager : NetworkBehaviour
     }
 
     [Server]
-    private Team CreateTeam(GamePlayer player)
+    private Team CreateTeam(GamePlayer player)//create team, set id, player, and add it to teams list
     {
         Team team = Instantiate(_pfbTeam);
         NetworkServer.Spawn(team.gameObject);

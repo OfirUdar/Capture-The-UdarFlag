@@ -44,7 +44,7 @@ public class CursorManager : MonoBehaviour
         CursorHandler();
     }
 
-    public void CursorHandler(bool isUIActive = false)
+    public void CursorHandler(bool isUIActive = false) // set ui cursor if UI interactive or if menu scene is active
     {
         if(isUIActive|| _activeScene.Equals(_menuScene))
             Cursor.SetCursor(_cursorTextureUI, Vector2.zero, CursorMode.Auto);

@@ -39,14 +39,14 @@ public class BagManager : NetworkBehaviour
         }
     }
     [Server]
-    public void ServerDie()
+    public void ServerDie() // when player die - remove flag, disable the current item, and disable input for switching items
     {
         TargetSetDie(true);
         RemoveFlag();
         ServerSetActiveCurrentItem(false);
     }
     [Server]
-    public void ServerRespawn()
+    public void ServerRespawn()// when server respawn - activate the current item, activate the input for switching items
     {
         TargetSetDie(false);
         ServerSetActiveCurrentItem(true);
@@ -200,7 +200,7 @@ public class BagManager : NetworkBehaviour
     }
 
     [TargetRpc]
-    private void TargetSetDie(bool isDie)
+    private void TargetSetDie(bool isDie) // set _isDie variable to prevent input
     {
         _isDie = isDie;
     }

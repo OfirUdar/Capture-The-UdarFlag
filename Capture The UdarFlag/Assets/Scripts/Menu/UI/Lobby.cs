@@ -116,7 +116,7 @@ public class Lobby : MonoBehaviour
     }
     public void StartGame()//call from editor
     {
-        _connPlayer.StartGame();
+        _connPlayer.CmdStartGame();
     }
     public void Exit()//call from editor
     {

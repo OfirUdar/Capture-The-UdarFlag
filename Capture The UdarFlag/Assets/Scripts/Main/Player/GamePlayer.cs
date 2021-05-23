@@ -54,7 +54,6 @@ public class GamePlayer : NetworkBehaviour
 
     #region Server
 
-
     [Server]
     public void SetIsLeader(bool isLeader)
     {
@@ -72,13 +71,13 @@ public class GamePlayer : NetworkBehaviour
     }
 
     [Command]
-    public void CmdSetCharacter(int index)
+    private void CmdSetCharacter(int index)
     {
         _characterToSpawn = CharacterSelection.Instance.GetCharacter(index);
     }
 
     [Command]
-    private void CmdStartGame()
+    public void CmdStartGame()
     {
         GameNetworkManager gameNetworkManager = ((GameNetworkManager)(NetworkManager.singleton));
         if (!_isLeader) { return; }
@@ -91,7 +90,7 @@ public class GamePlayer : NetworkBehaviour
         _isReady = isReady;
     }
     [Command]
-    private void CmdPlayerJoinedToMainScene()
+    public void CmdPlayerJoinedToMainScene()
     {
         int restPlayers = ((GameNetworkManager)NetworkManager.singleton).AddPlayerJoinedTheMainScene();
         RpcClientChangedToMainScene(restPlayers);
@@ -107,26 +106,15 @@ public class GamePlayer : NetworkBehaviour
     }
 
     [Client]
-    public void StartGame()
-    {
-        CmdStartGame();
-    }
-    [Client]
     public void ChangeSignReady()//ready or unready
     {
         CmdSetIsReady(!_isReady);
     }
 
-    [Client]
-    public void AuthorityChangedToMainScene()
-    {
-        CmdPlayerJoinedToMainScene();
-    }
-
     [ClientRpc]
     private void RpcClientChangedToMainScene(int restPlayers)
     {
-        ClientOnJoinToMainScene?.Invoke(restPlayers);
+        ClientOnJoinToMainScene?.Invoke(restPlayers);// when the client join to the main scene 
     }
     [ClientRpc]
     private void RpcSpawnedCharacter(PlayerManager playerManager)
@@ -136,11 +124,6 @@ public class GamePlayer : NetworkBehaviour
     }
 
     private void ClientHandleIsReadyChanged(bool oldReady, bool newReady)
-    {
-        ClientHandleReadyChanged();
-    }
-
-    private void ClientHandleReadyChanged()
     {
         ClientOnReadyChanged?.Invoke();
     }

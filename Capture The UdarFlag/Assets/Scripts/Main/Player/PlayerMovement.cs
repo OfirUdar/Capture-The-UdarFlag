@@ -325,9 +325,11 @@ public class PlayerMovement : NetworkBehaviour
 
     public void DisableMovement()
     {
-        this.enabled = false;
         _playerLinks.playerAudio.Stop();
+        this.enabled = false;
     }
+
+
     #endregion
 
 }

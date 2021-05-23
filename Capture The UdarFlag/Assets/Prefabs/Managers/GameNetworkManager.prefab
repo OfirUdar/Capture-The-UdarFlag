@@ -92,6 +92,7 @@ MonoBehaviour:
   - {fileID: 4451400263486648192, guid: 81f427e85d24f2e44998697eb1ad8e0e, type: 3}
   - {fileID: 4451400263486648192, guid: 6dd5f7afdcef44249895bdf7c5ab0e74, type: 3}
   - {fileID: 4451400263486648192, guid: f7bb5f9ddaa817e468a37bb7f10463ea, type: 3}
+  - {fileID: 4451400263486648192, guid: ecc6527f9c5199d49ab2339d4cada71b, type: 3}
   useSteam: 0
   _steamTransport: {fileID: 528712856}
   _steamManager: {fileID: 528712857}
@@ -99,6 +100,7 @@ MonoBehaviour:
   gameSettings:
     numTeams: 2
     numPlayersInTeam: 4
+    flagsAmountTarget: 3
   mainScene: Assets/Scenes/Map_01_Scene.unity
   menuScene: Assets/Scenes/Menu_Scene.unity
   tutorialScene: Assets/Scenes/Tutorial_Scene.unity

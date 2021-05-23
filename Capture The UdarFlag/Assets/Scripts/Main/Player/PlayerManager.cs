@@ -84,7 +84,7 @@ public class PlayerManager : NetworkBehaviour
         ServerRespawn();
     }
     [Server]
-    public void ServerImprisoner()
+    public void ServerImprisoner()// when the player become prisoner after died
     {
         if (playerLinks.gamePlayer.stats.IsAlive()) { return; }
 
@@ -119,7 +119,7 @@ public class PlayerManager : NetworkBehaviour
         playerLinks.bagManager.ServerDie();
 
         playerLinks.gamePlayer.stats.SetIsAlive(false);
-        int respawnTime = 5;
+        int respawnTime = 4;
         Invoke(nameof(ServerRespawnBackToBase), respawnTime);
         RpcHandlePlayerDie(respawnTime);
     }

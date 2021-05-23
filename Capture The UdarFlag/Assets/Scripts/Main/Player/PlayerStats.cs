@@ -69,12 +69,6 @@ public class PlayerStats : NetworkBehaviour
         _isAlive = isAlive;
     }
 
-    [Server]
-    public void ResetAll()
-    {
-        _isAlive = true;
-        _kills = 0;
-    }
 
     [Command]
     public void CmdSetPlayerName(string playerName)

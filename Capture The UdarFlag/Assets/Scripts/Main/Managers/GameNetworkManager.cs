@@ -8,18 +8,20 @@ using UnityEngine.SceneManagement;
 
 public class GameNetworkManager : NetworkManager
 {
-    [Space(3)]
+    [Space(2)]
+    [Header("-------Steam-------")]
     //Steam
     public bool useSteam = false;
     [SerializeField] private Transport _steamTransport;
     [SerializeField] private SteamManager _steamManager;
     [SerializeField] private Transport _defualtTransport;
-    [Space]
+    [Header("-------GameSettings-------")]
     public GameSettings gameSettings;
+    [Header("-------Scenes-------")]
     [Scene] public string mainScene = "Main_Scene";
     [Scene] public string menuScene = "Menu_Scene";
     [Scene] public string tutorialScene = "Tutorial_Scene";
-    [Header("Prefabs")]
+    [Header("-------Prefabs-------")]
     [SerializeField] private TeamsManager _teamsManagerPfb;
     [SerializeField] private PoolManager _poolManagerPfb;
     [SerializeField] private GameManager _gameManagerPfb;
@@ -245,7 +247,9 @@ public class GameNetworkManager : NetworkManager
     {
         if (!SceneManager.GetActiveScene().path.Equals(menuScene))
             ScreenChanger.Instance.LoadScene(menuScene, false);
+
         ClientOnStop?.Invoke();
+
         if (useSteam)
             SteamMatchmaking.LeaveLobby(currentLobbyID);
 
@@ -259,8 +263,9 @@ public class GameNetworkManager : NetworkManager
     public override void OnClientSceneChanged(NetworkConnection conn)
     {
         base.OnClientSceneChanged(conn);
+
         if (conn.identity.hasAuthority && !SceneManager.GetActiveScene().path.Equals(menuScene))
-            conn.identity.GetComponent<GamePlayer>().AuthorityChangedToMainScene();
+            conn.identity.GetComponent<GamePlayer>().CmdPlayerJoinedToMainScene();
     }
 
 
@@ -312,7 +317,8 @@ public class GameSettings
 {
     public int numTeams = 2;
     public int numPlayersInTeam = 1;
-
+    [Tooltip("The amount of flags (score) to win the game")]
+    public int flagsAmountTarget = 3;
     public int GetMaxPlayers()
     {
         return numTeams * numPlayersInTeam;
