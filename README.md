@@ -2,6 +2,7 @@
 ![Capture The UdarFlag Feature](https://user-images.githubusercontent.com/76158235/119045163-c46a6380-b9c3-11eb-83e0-db3baabef6b7.jpg)
 
 # Description
+Gameplay Trailer: https://www.youtube.com/watch?v=jyvKZ3_PjQk&ab_channel=UdarUdar
 
 "Capture the UdarFlag" is a multiplayer network game developed by Unity engine and programmed with C#.
 
@@ -35,4 +36,4 @@ In this project I used some plugins such as Mirror Networking and some packages 
 ![Map_03](https://user-images.githubusercontent.com/76158235/119138734-dfcc8180-ba4a-11eb-8a3e-d32035f2f9ac.jpg)
 ![image](https://user-images.githubusercontent.com/76158235/119139216-6b461280-ba4b-11eb-9bef-8ba5062c4194.png)
 ![Lobby](https://user-images.githubusercontent.com/76158235/119138721-da6f3700-ba4a-11eb-9147-58f93d0c8177.jpg)
-
+Gameplay Trailer: https://www.youtube.com/watch?v=jyvKZ3_PjQk&ab_channel=UdarUdar
