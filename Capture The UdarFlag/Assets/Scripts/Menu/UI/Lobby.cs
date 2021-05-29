@@ -14,9 +14,16 @@ public class Lobby : MonoBehaviour
     [SerializeField] private Button _buttonReady;
     [SerializeField] private TextMeshProUGUI _buttonReadyText;
     [SerializeField] private Color _readyColor = Color.green;
-    [SerializeField] private Color _unreadylColor = Color.gray;
+    [SerializeField] private Color _unreadyColor = Color.gray;
+    [Space]
+    //For Game Settings
+    [SerializeField] private GameObject _gameSettingsOB;
+    [SerializeField] private Slider _flagsAmountSlider;
+
     [Space]
     [SerializeField] private GameObject _menuPanel;
+
+
 
     private GamePlayer _connPlayer;
 
@@ -39,6 +46,8 @@ public class Lobby : MonoBehaviour
         if (NetworkClient.active)
         {
             _connPlayer = NetworkClient.connection.identity.GetComponent<GamePlayer>();
+            _gameSettingsOB.SetActive(NetworkServer.active);
+
             ChangeColorButtonReady(false);
             UpdatePlayersStatus();
         }
@@ -99,7 +108,7 @@ public class Lobby : MonoBehaviour
         if (isReady)
         {
             _buttonReadyText.text = "Unready";
-            _buttonReady.image.color = _unreadylColor;
+            _buttonReady.image.color = _unreadyColor;
         }
         else
         {
@@ -129,5 +138,15 @@ public class Lobby : MonoBehaviour
     private void HandleOnStopClient()
     {
         ScreenChanger.Instance.LoadPanel(this.gameObject, _menuPanel);
+    }
+
+
+    //Game Settings
+
+    public void SetFlagsAmount(TextMeshProUGUI _flagsAmountText)//call from editor
+    {
+        int flagsAmount = (int)_flagsAmountSlider.value;
+        ((GameNetworkManager)NetworkManager.singleton).gameSettings.flagsAmountTarget = flagsAmount;
+        _flagsAmountText.text = flagsAmount.ToString();
     }
 }

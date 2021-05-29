@@ -182,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _damage
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _itemGFX
@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 8208232410013958118}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _distance
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _fireRate
@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 33d6fa2fe54a79049a1c661c1fc88170, type: 3}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _bulletAmountMagazine
-      value: 21
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _shootAudio.audioClip
@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _aimingProperties.maxViewDistance
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _widthCurveAiming.m_Curve.Array.data[0].time

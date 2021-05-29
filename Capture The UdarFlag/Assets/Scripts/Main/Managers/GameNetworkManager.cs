@@ -69,6 +69,7 @@ public class GameNetworkManager : NetworkManager
 
     public override void Awake()
     {
+        base.Awake();
         if (useSteam)
         {
             transport = _steamTransport;
@@ -80,9 +81,6 @@ public class GameNetworkManager : NetworkManager
             _steamTransport.enabled = false;
             _steamManager.enabled = false;
         }
-
-
-        base.Awake();
     }
 
 

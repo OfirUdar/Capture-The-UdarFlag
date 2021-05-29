@@ -68,6 +68,7 @@ public class PlayerManager : NetworkBehaviour
         playerLinks.animManager.SetIsDead(false);
         playerLinks.health.Heal(playerLinks.health.GetMaxHealth());
         playerLinks.movement.enabled = true;
+        playerLinks.itemCollector.enabled = true;
         playerLinks.prisonerCirceFiller.gameObject.SetActive(false);
         playerLinks.prisonerDetector.IsPrisoner = false;
 
@@ -112,6 +113,7 @@ public class PlayerManager : NetworkBehaviour
     {
         playerLinks.animManager.SetIsDead(true);
         playerLinks.movement.enabled = false;
+        playerLinks.itemCollector.enabled = false;
         playerLinks.prisonerCirceFiller.gameObject.SetActive(true);
 
         playerLinks.rigidBody.isKinematic = true;
@@ -183,6 +185,7 @@ public class PlayerManager : NetworkBehaviour
     private void RpcHandlePlayerDie(int respawnTime)
     {
         playerLinks.movement.enabled = false;
+        playerLinks.itemCollector.enabled = false;
         playerLinks.prisonerCirceFiller.gameObject.SetActive(true);
         playerLinks.prisonerDetector.ClientDisplayBackgroundCircleFiller(!_isPlayerInAuthorityTeam);
 
@@ -195,6 +198,7 @@ public class PlayerManager : NetworkBehaviour
     private void RpcRespawn()
     {
         playerLinks.movement.enabled = true;
+        playerLinks.itemCollector.enabled = true;
         playerLinks.prisonerCirceFiller.gameObject.SetActive(false);
 
         playerLinks.rigidBody.isKinematic = false;

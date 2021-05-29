@@ -324,7 +324,7 @@ MonoBehaviour:
     name: CharacterDIe
     audioClip: {fileID: 8300000, guid: 1dd3ab5cf58d4f448909760f6ff6fad1, type: 3}
     volume: 1
-    pitch: 2.07
+    pitch: 1
     isLoop: 0
   _maxHealth: 100
 --- !u!114 &7642228547977663867
@@ -492,7 +492,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0
-  MaxDistance: 10
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0

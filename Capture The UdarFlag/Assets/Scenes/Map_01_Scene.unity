@@ -854,14 +854,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2336466716108695981, guid: cea05592a0344404998e447812602329, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2744810450140287994, guid: cea05592a0344404998e447812602329, type: 3}
       propertyPath: _mapCamera
       value: 
       objectReference: {fileID: 1161536442}
+    - target: {fileID: 4162421504825548651, guid: cea05592a0344404998e447812602329, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162421504825548651, guid: cea05592a0344404998e447812602329, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765915902341049975, guid: cea05592a0344404998e447812602329, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765915902341049975, guid: cea05592a0344404998e447812602329, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765915902341049975, guid: cea05592a0344404998e447812602329, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765915902341049975, guid: cea05592a0344404998e447812602329, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765915902702239753, guid: cea05592a0344404998e447812602329, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6159779120355927171, guid: cea05592a0344404998e447812602329, type: 3}
       propertyPath: m_Name
       value: Canvas_UI
@@ -948,10 +972,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6159779120355927295, guid: cea05592a0344404998e447812602329, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9171060674838847897, guid: cea05592a0344404998e447812602329, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

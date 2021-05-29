@@ -161,7 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _damage
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _itemGFX
@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 6989180438034594066}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _distance
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _fireRate
@@ -282,6 +282,10 @@ PrefabInstance:
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _aimingProperties.fieldOfView
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
+      propertyPath: _aimingProperties.maxViewDistance
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3969368311280355286, guid: ccd06712ccdcd064794fab183d7d51e0, type: 3}
       propertyPath: _widthCurveAiming.m_Curve.Array.data[0].time

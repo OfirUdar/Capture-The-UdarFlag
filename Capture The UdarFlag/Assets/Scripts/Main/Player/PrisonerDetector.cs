@@ -38,6 +38,12 @@ public class PrisonerDetector : CircleFillerDetector
         base.ServerOnFillEnd(parentIdentity);
 
         PlayerManager otherPlayer = parentIdentity.GetComponent<PlayerManager>();
+        PrisonerDetector otherPrisonerDetector = otherPlayer.playerLinks.prisonerDetector;
+        if (otherPlayer == _playerLinks.playerManager) { return; }// cannot imprison or save himself 
+        if (_playerLinks.playerManager.IsTeammate(otherPlayer.playerLinks.gamePlayer) && !otherPrisonerDetector.IsPrisoner) { return; }// cannot be friend of team who save who he is not prisoner
+        if (!_playerLinks.playerManager.IsTeammate(otherPlayer.playerLinks.gamePlayer) && otherPrisonerDetector.IsPrisoner) { return; }// cannot be enemy who imprison who he is prisoner
+
+
 
         otherPlayer.ServerImprisoner();
 
