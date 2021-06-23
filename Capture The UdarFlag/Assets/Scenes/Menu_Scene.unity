@@ -1510,7 +1510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1969096792695506461, guid: 867e5c72da80e2143bf6514fb7bde2ad, type: 3}
       propertyPath: useSteam
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1969096792695506462, guid: 867e5c72da80e2143bf6514fb7bde2ad, type: 3}
       propertyPath: m_RootOrder

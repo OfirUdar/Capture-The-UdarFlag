@@ -16,8 +16,8 @@ public class CameraFollow : MonoBehaviour
     }
 
     private void LateUpdate()
-    {
-        if (targetFollow==null) { return; }
+    {     
+        if (ReferenceEquals(targetFollow, null)) { return; }
 
         Vector3 newPos = targetFollow.position + _offset;
 

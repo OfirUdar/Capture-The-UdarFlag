@@ -458,6 +458,38 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: ad234251ab7ef7547955aae00a28bb2d, type: 2}
+    - target: {fileID: 5289998752291011037, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6bc4309745e6494daeae6d3f2037fa7, type: 2}
+    - target: {fileID: 5290644187061715619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: UVModule.mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290644187061715619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: UVModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290644187061715619, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: feaed5e6749e159498ea201f2ee7105c, type: 3}
+    - target: {fileID: 5291419650333591907, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6bc4309745e6494daeae6d3f2037fa7, type: 2}
+    - target: {fileID: 5291661581748306537, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: UVModule.mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291661581748306537, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: UVModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291661581748306537, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c4c5994c7f347d49bc9934664c38a0b, type: 3}
     - target: {fileID: 5453261052808051312, guid: e6ed7b2d66d04cd4d8fa2d87067c265d, type: 3}
       propertyPath: m_RootOrder
       value: 11
