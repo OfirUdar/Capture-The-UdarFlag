@@ -1,10 +1,10 @@
 Using pre-set license
-Built from '2020.3/staging' branch; Version is '2020.3.6f1 (338bb68529b2) revision 3378102'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 18363.476; Version 1909; 64bit' Language: 'en' Physical Memory: 8129 MB
+Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'en' Physical Memory: 8129 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
- COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\Unity.exe
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,14 +15,14 @@ F:/Desktop Shortcut/Unity Projects/Capture-The-UdarFlag/Capture The UdarFlag
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51700
+53675
 Successfully changed project path to: F:/Desktop Shortcut/Unity Projects/Capture-The-UdarFlag/Capture The UdarFlag
 F:/Desktop Shortcut/Unity Projects/Capture-The-UdarFlag/Capture The UdarFlag
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 87.77 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 114.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.6f1 (338bb68529b2)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/UnitySubsystems
+Initialize engine version: 2020.3.25f1 (9b9180224418)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path F:/Desktop Shortcut/Unity Projects/Capture-The-UdarFlag/Capture The UdarFlag/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
@@ -30,200 +30,229 @@ Direct3D:
     Renderer: AMD Radeon R7 200 Series (ID=0x6613)
     Vendor:   
     VRAM:     2028 MB
-    Driver:   26.20.12028.2
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+    Driver:   27.20.21003.1028
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56412
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56044
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001723 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003940 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 89.19 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 98.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.907 seconds
+- Completed reload, in  0.777 seconds
+Domain Reload Profiling:
+	ReloadAssembly (777ms)
+		BeginReloadAssembly (76ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (607ms)
+			LoadAssemblies (73ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (189ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (255ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (98ms)
+				BeforeProcessingInitializeOnLoad (20ms)
+				ProcessInitializeOnLoadAttributes (98ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002907 seconds.
+Registered in 0.008608 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 88.82 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 99.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Find all reader and writers took 134 milliseconds
+Find all reader and writers took 162 milliseconds
 Script Module: UnityEngine.UI.dll
-Weave behaviours and messages took79 milliseconds
-Find all reader and writers took 105 milliseconds
+Weave behaviours and messages took114 milliseconds
+Find all reader and writers took 747 milliseconds
 Script Module: Unity.RenderPipelines.Core.Runtime.dll
-Weave behaviours and messages took57 milliseconds
-Find all reader and writers took 107 milliseconds
-Script Module: UnityEngine.TestRunner.dll
-Weave behaviours and messages took20 milliseconds
-Find all reader and writers took 108 milliseconds
-Script Module: Unity.Mathematics.dll
-Weave behaviours and messages took178 milliseconds
-Find all reader and writers took 96 milliseconds
-Script Module: SimpleWebTransport.dll
-Weave behaviours and messages took5 milliseconds
-Find all reader and writers took 134 milliseconds
-Script Module: Unity.RenderPipelines.Universal.Runtime.dll
-Weave behaviours and messages took96 milliseconds
-Find all reader and writers took 159 milliseconds
-Script Module: Unity.Animation.Rigging.dll
-Weave behaviours and messages took57 milliseconds
+Weave behaviours and messages took262 milliseconds
 Find all reader and writers took 127 milliseconds
+Script Module: UnityEngine.TestRunner.dll
+Weave behaviours and messages took32 milliseconds
+Find all reader and writers took 122 milliseconds
+Script Module: Unity.Mathematics.dll
+Weave behaviours and messages took237 milliseconds
+Find all reader and writers took 108 milliseconds
+Script Module: SimpleWebTransport.dll
+Weave behaviours and messages took10 milliseconds
+Find all reader and writers took 138 milliseconds
+Script Module: Unity.RenderPipelines.Universal.Runtime.dll
+Weave behaviours and messages took69 milliseconds
+Find all reader and writers took 114 milliseconds
+Script Module: Unity.Animation.Rigging.dll
+Weave behaviours and messages took23 milliseconds
+Find all reader and writers took 107 milliseconds
 Script Module: Unity.Burst.dll
-Weave behaviours and messages took71 milliseconds
-Find all reader and writers took 135 milliseconds
+Weave behaviours and messages took42 milliseconds
+Find all reader and writers took 156 milliseconds
 Script Module: Unity.TextMeshPro.dll
-Weave behaviours and messages took90 milliseconds
-Find all reader and writers took 122 milliseconds
+Weave behaviours and messages took91 milliseconds
+Find all reader and writers took 106 milliseconds
 Script Module: Unity.Timeline.dll
-Weave behaviours and messages took37 milliseconds
-Find all reader and writers took 110 milliseconds
+Weave behaviours and messages took25 milliseconds
+Find all reader and writers took 107 milliseconds
 Script Module: Telepathy.dll
-Weave behaviours and messages took2 milliseconds
-Find all reader and writers took 122 milliseconds
+Weave behaviours and messages took4 milliseconds
+Find all reader and writers took 110 milliseconds
 Script Module: Mirror.Cloud.dll
-Weave behaviours and messages took2 milliseconds
-Find all reader and writers took 109 milliseconds
+Weave behaviours and messages took6 milliseconds
+Find all reader and writers took 117 milliseconds
 Script Module: kcp2k.dll
 Weave behaviours and messages took4 milliseconds
-Find all reader and writers took 112 milliseconds
+Find all reader and writers took 110 milliseconds
 Script Module: Unity.RenderPipelines.Core.ShaderLibrary.dll
 Weave behaviours and messages took0 milliseconds
-Find all reader and writers took 121 milliseconds
+Find all reader and writers took 114 milliseconds
 Script Module: Unity.RenderPipeline.Universal.ShaderLibrary.dll
 Weave behaviours and messages took0 milliseconds
 Find all reader and writers took 115 milliseconds
 Script Module: Unity.RenderPipelines.Universal.Shaders.dll
 Weave behaviours and messages took0 milliseconds
-Find all reader and writers took 109 milliseconds
+Find all reader and writers took 116 milliseconds
 Script Module: Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
 Weave behaviours and messages took0 milliseconds
-Find all reader and writers took 163 milliseconds
+Find all reader and writers took 155 milliseconds
 Script Module: UnityEditor.TestRunner.dll
-Weave behaviours and messages took51 milliseconds
-Find all reader and writers took 116 milliseconds
+Weave behaviours and messages took47 milliseconds
+Find all reader and writers took 136 milliseconds
 Script Module: Mirror.CompilerSymbols.dll
 Weave behaviours and messages took0 milliseconds
-Find all reader and writers took 174 milliseconds
+Find all reader and writers took 154 milliseconds
 Script Module: UnityEditor.UI.dll
-Weave behaviours and messages took13 milliseconds
-Find all reader and writers took 114 milliseconds
+Weave behaviours and messages took18 milliseconds
+Find all reader and writers took 132 milliseconds
 Script Module: Unity.ShaderGraph.Utilities.dll
 Weave behaviours and messages took0 milliseconds
 Mono: successfully reloaded assembly
-- Completed reload, in 10.312 seconds
+- Completed reload, in 12.282 seconds
+Domain Reload Profiling:
+	ReloadAssembly (12283ms)
+		BeginReloadAssembly (180ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (12027ms)
+			LoadAssemblies (138ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (440ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (11227ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (100ms)
+				BeforeProcessingInitializeOnLoad (112ms)
+				ProcessInitializeOnLoadAttributes (1124ms)
+				ProcessInitializeOnLoadMethodAttributes (9869ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3068 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 179.7 MB.
-System memory in use after: 179.9 MB.
+Unloading 3489 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.9 MB.
+System memory in use after: 180.1 MB.
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3537.
-Total: 4.771400 ms (FindLiveObjects: 0.427600 ms CreateObjectMapping: 0.363300 ms MarkObjects: 3.941100 ms  DeleteObjects: 0.038000 ms)
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 3947.
+Total: 5.465000 ms (FindLiveObjects: 0.471800 ms CreateObjectMapping: 0.369700 ms MarkObjects: 4.589000 ms  DeleteObjects: 0.033700 ms)
 
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Plugins/Low_Poly_Environment_World/Content/Textures/texture_leaf.psd
-  artifactKey: Guid(0c4c5994c7f347d49bc9934664c38a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Low_Poly_Environment_World/Content/Textures/texture_leaf.psd using Guid(0c4c5994c7f347d49bc9934664c38a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd531926418028cac29f52dc1709b8fc') in 0.105484 seconds
-  Import took 0.130525 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.462205 seconds.
-  path: Assets/Plugins/Low_Poly_Environment_World/Content/Textures/texture_sunshafts.psd
-  artifactKey: Guid(feaed5e6749e159498ea201f2ee7105c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Low_Poly_Environment_World/Content/Textures/texture_sunshafts.psd using Guid(feaed5e6749e159498ea201f2ee7105c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f33c4ddb5b9df7b09552dd8b4a5e536') in 0.027454 seconds
-  Import took 0.078533 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 135.505126 seconds.
-  path: Assets/Scenes/Map_01_Scene.unity
-  artifactKey: Guid(c9fc6dc8dcbedb64bb04af3b62768a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Map_01_Scene.unity using Guid(c9fc6dc8dcbedb64bb04af3b62768a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0685e78b2cfa6c1f9b302caa0f588b65') in 0.026478 seconds
-  Import took 0.054979 seconds .
+  path: Assets/Plugins/BattleRoyaleHeroesPA/Scene/AnimLayerScene.unity
+  artifactKey: Guid(48de28daa1ad39045b6d81649d7c3e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/BattleRoyaleHeroesPA/Scene/AnimLayerScene.unity using Guid(48de28daa1ad39045b6d81649d7c3e9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a444e8c81dec4138d1805f161893a5e7') in 0.022432 seconds 
+  Import took 0.029771 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002848 seconds.
+Registered in 0.009182 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.371 seconds
+- Completed reload, in  1.526 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1527ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1314ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (418ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (581ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (122ms)
+				ProcessInitializeOnLoadAttributes (422ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
 Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.33 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2935 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 173.4 MB.
-System memory in use after: 173.6 MB.
+Unloading 3356 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 170.5 MB.
+System memory in use after: 170.7 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3546.
-Total: 4.918900 ms (FindLiveObjects: 0.344400 ms CreateObjectMapping: 0.158600 ms MarkObjects: 4.388100 ms  DeleteObjects: 0.026000 ms)
+Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 3949.
+Total: 5.847000 ms (FindLiveObjects: 0.440300 ms CreateObjectMapping: 0.367400 ms MarkObjects: 5.009600 ms  DeleteObjects: 0.028400 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 183.856229 seconds.
-  path: Assets/Scenes/Map_01_Scene.unity
-  artifactKey: Guid(c9fc6dc8dcbedb64bb04af3b62768a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Map_01_Scene.unity using Guid(c9fc6dc8dcbedb64bb04af3b62768a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a19d6f8006e4f778e290d0bf569a88a4') in 0.016538 seconds
-  Import took 0.055705 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003024 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.451 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2935 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 173.4 MB.
-System memory in use after: 173.7 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3549.
-Total: 3.641500 ms (FindLiveObjects: 0.402400 ms CreateObjectMapping: 0.282100 ms MarkObjects: 2.922400 ms  DeleteObjects: 0.033400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002849 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.250 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2969 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 174.5 MB.
-System memory in use after: 174.8 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 3586.
-Total: 3.407000 ms (FindLiveObjects: 0.397800 ms CreateObjectMapping: 0.284600 ms MarkObjects: 2.680900 ms  DeleteObjects: 0.042600 ms)
-
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -184,6 +184,7 @@ public class PlayerMovement : NetworkBehaviour
             _serverMovement *= _speedMovementDictionary[_movementState] * deltaTime;
             transform.Translate(_serverMovement, Space.World);
 
+
             if (!isAiming)
             {
                 //Rotate to direction of moving:

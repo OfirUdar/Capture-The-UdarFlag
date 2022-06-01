@@ -1,0 +1,1 @@
+This plugin is payed assest, so it has removed.
